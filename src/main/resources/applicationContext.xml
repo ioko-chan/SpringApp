@@ -9,6 +9,6 @@
 
     <bean id="testBean"
           class="TestBean">
-        <constructor-arg value="Neil"/>
+        <constructor-arg value="Nyan-myr"/>
     </bean>
 </beans>
