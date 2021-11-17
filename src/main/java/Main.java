@@ -6,9 +6,7 @@ public class Main {
                 "applicationContext.xml"
         );
 
-        Music music = context.getBean("musicBean",Music.class);
-
-        MusicalPlayer musicalPlayer = new MusicalPlayer(music);
+        MusicalPlayer musicalPlayer = context.getBean("musicPlayer", MusicalPlayer.class);
         musicalPlayer.playMusic();
 
         context.close();
