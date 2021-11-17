@@ -7,6 +7,7 @@ public class Main {
         );
 
         MusicalPlayer musicalPlayer = context.getBean("musicPlayer", MusicalPlayer.class);
+
         musicalPlayer.playMusic();
 
         context.close();
