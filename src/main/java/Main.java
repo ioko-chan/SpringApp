@@ -6,9 +6,10 @@ public class Main {
                 "applicationContext.xml"
         );
 
-        TestBean testBean = context.getBean("testBean",TestBean.class);
+        Music music = context.getBean("musicBean",Music.class);
 
-        System.out.println(testBean.getName());
+        MusicalPlayer musicalPlayer = new MusicalPlayer(music);
+        musicalPlayer.playMusic();
 
         context.close();
     }
