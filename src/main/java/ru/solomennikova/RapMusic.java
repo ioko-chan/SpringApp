@@ -1,3 +1,5 @@
+package ru.solomennikova;
+
 public class RapMusic implements Music {
     @Override
     public String getSong() {
