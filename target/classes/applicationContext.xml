@@ -13,13 +13,16 @@
           class="RockMusic">
     </bean>
     <bean id="musicBean2"
-          class="ClassicalMusic">
+          class="ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic">
     </bean>
     <bean id="musicBean3"
           class="RapMusic">
     </bean>
 
-    <bean id = "musicPlayer"
+    <!--<bean id = "musicPlayer"
           class="MusicalPlayer"
            scope="prototype" >
         <property name="musicList">
@@ -31,6 +34,6 @@
         </property>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+    </bean>-->
 
 </beans>
