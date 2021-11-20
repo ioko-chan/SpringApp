@@ -6,9 +6,12 @@ public class Main {
                 "applicationContext.xml"
         );
 
-        MusicalPlayer musicalPlayer = context.getBean("musicPlayer", MusicalPlayer.class);
+        MusicalPlayer firstMusicalPlayer = context.getBean("musicPlayer", MusicalPlayer.class);
+        MusicalPlayer secondMusicalPlayer = context.getBean("musicPlayer",MusicalPlayer.class);
 
-        musicalPlayer.playMusic();
+        secondMusicalPlayer.setVolume(17);
+        System.out.println(firstMusicalPlayer.getVolume());
+        System.out.println(secondMusicalPlayer.getVolume());
 
         context.close();
     }
